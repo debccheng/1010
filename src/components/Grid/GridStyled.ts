@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const GridStyled = styled.div`
   width: 320px;
   height: 320px;
-  margin: 100px auto;
+  margin: 100px auto 60px;
   display: grid;
   grid-template-columns: repeat(10, minmax(0, 1fr));
   justify-content: center;
