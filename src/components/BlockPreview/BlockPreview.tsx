@@ -1,5 +1,5 @@
 import React, { FC, Fragment } from 'react';
-import GameBlock from './components/GameBlock';
+import GameBlock from './components/GameBlock/GameBlock';
 import { queueGameBlocks } from '../../utils/gameConfig';
 import { BlockPreviewWrapperStyled } from './BlockPreviewStyled';
 

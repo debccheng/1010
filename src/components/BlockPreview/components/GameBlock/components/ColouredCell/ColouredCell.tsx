@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Block } from '../../../../../utils/blockMaker';
+import { Block } from '../../../../../../utils/blockMaker';
 import { ColouredCellStyled } from './ColouredCellStyled';
 
 type Props = {
