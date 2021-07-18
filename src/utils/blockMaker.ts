@@ -64,13 +64,13 @@ export class Block {
   private static scoreConfig: Record<BlockType, number> = {
     'Square-sm': 1,
     'Square-md': 4,
-    'Square-lg': 10,
+    'Square-lg': 9,
     'Line-xs': 2,
-    'Line-sm': 4,
-    'Line-md': 6,
-    'Line-lg': 8,
+    'Line-sm': 3,
+    'Line-md': 4,
+    'Line-lg': 5,
     'L-sm': 3,
-    'L-lg': 7,
+    'L-lg': 5,
   }
 
   private static getRotation = (shape: BlockShape): BlockShape => {
