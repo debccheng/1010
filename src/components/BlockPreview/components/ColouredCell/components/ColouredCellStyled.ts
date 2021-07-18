@@ -8,8 +8,8 @@ export const ColouredCellStyled = styled.div<ColouredCellType>`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 20px;
+  width: 20px;
   border-radius: 2px;
   ${({ colour }) => (
     `background: ${colour}`
