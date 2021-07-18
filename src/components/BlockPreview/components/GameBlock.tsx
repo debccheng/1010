@@ -5,12 +5,8 @@ import { GameBlockContainerStyled } from './GameBlockStyled';
 
 const GameBlock: FC<Partial<Block>> = ({ shape, colour }: Partial<Block>) => {
   if (!shape || !colour) return null;
-  console.log(shape);
-  const columnLength = shape.length;
-  const rowLength = shape[0].length ?? 0;
-  const gridLength = columnLength > rowLength ? columnLength : rowLength;
   return (
-    <GameBlockContainerStyled gridLength={gridLength}>
+    <GameBlockContainerStyled gridLength={shape.length}>
       {shape.map((row, y) => (
         <Fragment key={`${y + 1}`}>
           {row

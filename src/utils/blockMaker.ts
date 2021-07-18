@@ -17,7 +17,7 @@ export class Block {
   constructor(name: BlockType) {
     this.name = name;
     this.colour = Block.colours[name];
-    this.shape = Block.shapeConfig[name];
+    this.shape = Block.getRotation(Block.shapeConfig[name]);
     this.score = Block.scoreConfig[name];
   }
 
@@ -75,15 +75,17 @@ export class Block {
 
   private static getRotation = (shape: BlockShape): BlockShape => {
     const rotationIndex: number = getRandomNumber(4);
+    if (rotationIndex === 0) return shape;
+
     const rowNumber = shape.length;
     const columnNumber = shape[0].length;
     let rotatedShape: BlockShape = [];
     for (let i = 0; i < rotationIndex; i += 1) {
-      const temp = [];
+      const temp: BlockShape = [];
       for (let j = 0; j < columnNumber; j += 1) {
         const row: Array<1 | 0> = [];
-        for (let k = rowNumber - 1; k >= 0; k -= 1) {
-          row.push(shape[k][j]);
+        for (let k = rowNumber; k > 0; k -= 1) {
+          row.push(shape[k - 1][j]);
         }
         temp.push(row);
       }
