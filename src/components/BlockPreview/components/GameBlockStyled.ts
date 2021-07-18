@@ -5,6 +5,7 @@ type GridLengthType = {
 }
 
 export const GameBlockContainerStyled = styled.div<GridLengthType>`
+  align-self: center;
   margin: 0 auto;
   display: grid;
   justify-content: center;

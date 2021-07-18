@@ -7,4 +7,6 @@ export const BlockPreviewWrapperStyled = styled.div`
   margin: 0 auto;
   display: flex;
   width: 70%;
+  height: 108px;
+  box-sizing: border-box;
 `;
